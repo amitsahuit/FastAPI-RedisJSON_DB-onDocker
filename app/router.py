@@ -33,4 +33,6 @@ async def update(pk: str, task: Task):
 @router.delete('/task/{pk}')
 async def delete(pk: str):
     _task = Task.get(pk)
-    return _task.delete()
+    _task.delete()
+    return "deleted"
+    #return _task.delete()
